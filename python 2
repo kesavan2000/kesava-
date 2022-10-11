@@ -1,0 +1,14 @@
+employee={'name':'Tim','age':30,'birthday':'1990-03-10','job':"Devops Engineer"}
+
+employee['job']='Software Engineer'
+employee.pop('age')
+
+for i,j in employee.items():
+    print(i, ':' ,j)
+    
+    
+    
+    #####output
+    name : Tim
+birthday : 1990-03-10
+job : Software Engineer
