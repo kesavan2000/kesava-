@@ -1,0 +1,29 @@
+employee=[{'name':'tina','age':30,'birthday':'1990-03-10','job':'Devops engineer','address':{'city':'New york','country':'USA'}},
+          {'name':'Tim','age':30,'birthday':'1985-02-21','job':'developer','address':{'city':'sidney','country':'Australia'}}]
+for a in employee:
+    for b in a:
+
+        if b=="name":
+            print(b,'=',a[b])
+
+        elif b=="job":
+            print(b,'=',a[b])
+
+        elif b=="address":
+            for c in a[b]:
+                if c=="city":
+                    print(c,'=',a[b][c])
+
+
+
+print("country of the second employee :", employee[1]['address']['country'])
+
+
+output:
+name = tina
+job = Devops engineer
+city = New york
+name = Tim
+job = developer
+city = sidney
+country of the second employee : Australia
