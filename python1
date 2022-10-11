@@ -1,0 +1,17 @@
+a=[1,2,2,4,4,5,6,8,10,13,22,35,52,83]
+b=[]
+for i in a:
+    if i>=8:
+        b.append(i)
+print(b)
+c=int(input("enter a number:"))
+new=[]
+for i in b:
+    if c<i:
+        new.append(i)
+print(new)
+
+####output:
+[8, 10, 13, 22, 35, 52, 83]
+enter a number:10
+[13, 22, 35, 52, 83]
