@@ -1,0 +1,67 @@
+####p1#####
+
+def string_function(string):
+    b_count=0
+    c_count=0
+    for i in string:
+        if i.isupper():
+            b_count+=1
+        elif i.islower():
+            c_count+=1
+    print("the number of upper case letters:",b_count)
+    print("the number of lower case letters:",c_count)
+string=input("enter any string")
+string_function(string)
+
+
+###output####
+enter any string kiran
+the number of upper case letters: 0
+the number of lower case letters: 5
+
+
+
+
+#####p2######
+
+def list_function(list):
+    print("the elements enter to list:",list)
+    print("the even number is:\n")
+    for j in list:
+        if j%2==0:
+            print(j)
+my_list=list(map(int,input("enter elements in the list:").strip().split(' ')))
+list_function(my_list)
+
+
+####output####
+enter elements in the list:1 4 6 9
+the elements enter to list: [1, 4, 6, 9]
+the even number is:
+4
+6
+
+
+
+#####p3#####
+def my_function(list):
+    if list[0]['age']<list[1]['age']:
+        print("name of youngest employee:",list[0]['name'])
+        print("age of youngest emoployee:",list[0]['age'])
+    else:
+        print("name of youngest employee:", list[1]['name'])
+        print("age of youngest emoployee:", list[1]['age'])
+my_list=[{"name":"tina","age":30,"birthday":"1990-03-10","job":"devops engineer","address":{"city":"new york","country":"usa"}},{"name":"tim","age":35,"birthday":"1985-02-21","job":"developer","address":{"city":"sydney","country":"australia"}}]
+my_function(my_list)
+
+
+####output####
+name of youngest employee: tina
+age of youngest emoployee: 30
+
+
+
+
+
+
+
