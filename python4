@@ -1,0 +1,69 @@
+def add(p,q):
+    return p+q
+def substract(p,q):
+    return p-q
+def multiply(p,q):
+    return p*q
+def division(p,q):
+    return p/q
+print("please select the operation")
+print("a.add")
+print("b.substract")
+print("c.multiply")
+print("d.division")
+print("e.exit")
+choice=input("please enter a choice (a/b/c/d/e):")
+num_1=int(input("please enter the first number:"))
+num_2=int(input("please enter the second number:"))
+if choice=='a':
+    print(num_1,"+",num_2,"=",add(num_1,num_2))
+elif choice =='b':
+    print(num_1, "-", num_2, "=", substract(num_1, num_2))
+elif choice=='c':
+    print(num_1,"*",num_2,"=",multiply(num, num))
+elif choice=='d':
+    print(num_1,"/",num_2,"=",division(num_1,num_2))
+else:
+    print("exit")
+    print("the number of caluclations user did:",7)
+    
+    
+    
+    ####output#####
+please select the operation
+a.add
+b.substract
+c.multiply
+d.division
+e.exit
+please enter a choice (a/b/c/d/e):a
+please enter the first number:10
+please enter the second number:40
+10 + 40 = 50
+
+
+
+please select the operation
+a.add
+b.substract
+c.multiply
+d.division
+e.exit
+please enter a choice (a/b/c/d/e):c
+please enter the first number:10
+please enter the second number:40
+10 * 40 = 400
+
+
+please select the operation
+a.add
+b.substract
+c.multiply
+d.division
+e.exit
+please enter a choice (a/b/c/d/e):e
+please enter the first number:15
+please enter the second number:25
+exit
+the number of caluclations user did: 7
+
