@@ -1,0 +1,160 @@
+    ####studentclass####
+class student:
+    def data(self,firstname,lastname,age,lectures):
+       self.fn=firstname
+       self.ln=lastname
+       self.a=age
+       self.l=lectures
+    def display(self):
+        print(self.fn,"",self.ln)
+        print(self.l)
+        v=input("add new lectures:",)
+        (self.l).append(v)
+        print(self.l)
+        mm= list(map(str, input("enter lecture:", ).split()))
+        for i in mm:
+            if i in self.l:
+                (self.l).remove(i)
+            else:
+                print("not in list")
+        print(self.l)
+e=student()
+c=list(map(str,input("enter lecture:",).split()))
+e.data("kiran","kishore",67,c)
+e.display()
+
+
+
+####output#####
+
+enter lecture:telugu english
+kiran  kishore
+['telugu', 'english']
+add new lectures:chemistry
+['telugu', 'english', 'chemistry']
+enter lecture:english
+['telugu', 'chemistry']
+
+
+
+
+#####professorclass#####
+
+class professor:
+    def data(self,firstname,lastname,age,subjects):
+       self.fn=firstname
+       self.ln=lastname
+       self.a=age
+       self.s=subjects
+    def display(self):
+        print(self.fn,"",self.ln)
+        print(self.s)
+        a=input("add new subjects:",)
+        (self.s).append(a)
+        print(self.s)
+        mm= list(map(str, input("enter subject:", ).split()))
+        for j in mm:
+            if j in self.s:
+                (self.s).remove(j)
+            else:
+                print("not in list")
+        print(self.s)
+k=professor()
+b=list(map(str,input("enter subject:",).split()))
+p=input("enter first name:")
+v=input("enter second name:")
+n=input("enter the age:")
+k.data(p,v,n,b)
+k.display()
+
+
+####output#####
+
+enter subject:maths physics
+enter first name:pranesh
+enter second name:nivesh
+enter the age:35
+pranesh  nivesh
+['maths', 'physics']
+add new subjects:chemistry
+['maths', 'physics', 'chemistry']
+enter subject:maths
+['physics', 'chemistry']
+
+
+
+
+
+####lectureclass#####
+
+class lecture:
+    def data(self,name,maxnumberofstudents,duration,listofprofessorsgivingthislecture):
+       self.n=name
+       self.m=maxnumberofstudents
+       self.d=duration
+       self.l=listofprofessorsgivingthislecture
+    def display(self):
+        print(self.n)
+        print(self.d)
+        v=list(map(str,input("adding professor to the list of professors giving this lecture:").split()))
+        for i in v:
+            (self.l).append(i)
+        print(self.l)
+       
+k=lecture()
+n,p=input("name and duration of lecture:")
+m=input("max num:",)
+a=list(map(str,input("listofprofessorsgivingthislecture:").split()))
+k.data(n,m,p,a)
+k.display()
+
+
+
+####output#####
+name and duration of lecture:maths 3months
+max num: 56
+listofprofessorsgivingthislecture: kesav madhav
+maths
+3months
+adding professor to the list of professors giving this lecture:mani sreekanth
+['kesav','madhav','mani','sreekanth']
+
+
+
+
+####studentsandprofessors####
+
+
+class student:
+    def data(self,firstname,lastname,age):
+       self.fn=firstname
+       self.ln=lastname
+       self.a=age
+
+    def display(self):
+        print(self.fn,"",self.ln)
+        print(self.a)
+e=student()
+e.data("kiran","kishore",67,)
+e.display()
+class professor(student):
+    pass
+p=professor()
+p.data("kesav","mordhana",89)
+p.display()
+
+
+
+
+
+####output####
+
+kiran  kishore
+67
+kesav  mordana
+89
+
+
+
+
+
