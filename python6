@@ -1,0 +1,27 @@
+import random
+number1=random.randrange(1,10)
+guess1=0
+count1=0
+while guess1!=number1 and guess1!="exit":
+    guess1=input("please guess1 a number between 1 and 10.when you want to end the game print 'exit':")
+    if guess1=="exit":
+        print("Game Over")
+        break
+    guess1=int(guess1)
+    count1+=1
+    if guess1 not in range(1,10):
+         print("guess1 number between 1 and 9")
+    else:
+         if count1==1:
+                print("You Won The Game")
+                
+                
+                
+                
+    #####output######
+please guess1 a number between 1 and 10.when you want to end the game print 'exit':2
+You Won The Game
+please guess1 a number between 1 and 10.when you want to end the game print 'exit':20
+guess1 number between 1 and 9
+please guess1 a number between 1 and 10.when you want to end the game print 'exit':exit
+Game Over
