@@ -1,0 +1,34 @@
+import pandas as pd
+c = pd.read_excel("D:\\kesav.xlsx")
+df= pd.DataFrame(c)
+print(df)
+print()
+print("after sorting a spread sheet:")
+print()
+print(df.sort_values("Years of experience",ascending=False))
+
+
+
+####output#####
+
+            Name  Years of experience      JobTitle        DOB
+0      MUNIRAJA                     7   Mathematics 1985-01-04
+1         RAMESH                   12    Statistics 1980-01-05
+2        Amrutha                    7     Computers 1986-02-04
+3  Shankar Reddy                   13    Statistics 1979-05-10
+4         Pavani                    5        Python 1990-01-04
+5          Kiran                    3          java 1992-08-07
+6        kamlesh                    8   mathematics 1990-01-09
+7      sivakumar                   10       physics 1995-02-01
+
+after sorting a spread sheet:
+
+            Name  Years of experience      JobTitle        DOB
+3  Shankar Reddy                   13    Statistics 1979-05-10
+1         RAMESH                   12    Statistics 1980-01-05
+7      sivakumar                   10       physics 1995-02-01
+6        kamlesh                    8   mathematics 1990-01-09
+0      MUNIRAJA                     7   Mathematics 1985-01-04
+2        Amrutha                    7     Computers 1986-02-04
+4         Pavani                    5        Python 1990-01-04
+5          Kiran                    3          java 1992-08-07
