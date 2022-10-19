@@ -1,0 +1,45 @@
+
+from datetime import datetime
+from datetime import date
+import time
+
+today = date.today()
+
+
+def user_birthday():
+    year = int(input('enter your birthday year:'))
+    month = int(input('enter your birthday month:'))
+    day = int(input('enter your birthday day:'))
+
+    birthday = datetime(year, month, day)
+    return birthday
+
+
+def calculate_dates(birthday):
+    today == date.fromtimestamp(time.time())
+    birthday = date(today.year, birthday.month, birthday.day)
+    if birthday < today:
+        birthday = birthday.replace(year=today.year + 1)
+        return birthday
+    else:
+        return birthday
+
+
+bday = user_birthday()
+t = calculate_dates(bday)
+time_to_birthday = abs(t - today)
+days = str(time_to_birthday.days)
+hours=str(time_to_birthday.days*24)
+minutes=str(time_to_birthday.days*24*60)
+seconds=str(time_to_birthday.days*24*60*60)
+
+print("Time to Birthday is :" + days + " days",",",hours,"hours",",",minutes,"minutes","and",seconds,"seconds")
+
+
+
+####output#####
+
+enter your birthday year:2000
+enter your birthday month:12
+enter your birthday day:15
+Time to Birthday is :57 days , 1368 hours , 82080 minutes and 4924800 seconds
