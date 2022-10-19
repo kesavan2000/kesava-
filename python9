@@ -1,0 +1,39 @@
+import requests
+from pprint import pprint
+import base64
+from github import Github
+from pprint import pprint
+
+username=input("enter the github username:")
+g = Github()
+user = g.get_user(username)
+for repo in user.get_repos():
+    print(repo)
+
+request = requests.get('https://api.github.com/users/'+username+'/repos')
+json = request.json()
+for i in range(0, len(json)):
+    print("project Number:", i+1)
+    print("project Name:", json[i]['name'])
+    print("project URL:", json[i]['svn_url'], "\n")
+    
+    
+    
+    ####output####
+    
+    python p.py
+enter the github username:kesavan2000
+Repository(full_name="kesavan2000/auropro")
+Repository(full_name="kesavan2000/git")
+Repository(full_name="kesavan2000/kesava-")
+project Number: 1
+project Name: auropro
+project URL: https://github.com/kesavan2000/auropro
+
+project Number: 2
+project Name: git
+project URL: https://github.com/kesavan2000/git
+
+project Number: 3
+project Name: kesava-
+project URL: https://github.com/kesavan2000/kesava-
