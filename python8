@@ -1,0 +1,41 @@
+
+from datetime import datetime
+while True:
+    c = input("remaining days coming to your birtday yes or no:")
+    if c=="yes":
+        y=int(input("enter to the birthday year:",))
+        m=int(input("enter to the birthday month:",))
+        d=int(input("enter to the birthday date:",))
+        pd=datetime.now()
+        def day_count(pd):
+            birthday=datetime(y,m,d)
+            pd=datetime.now()
+            usr1=datetime(pd.year,m,d)
+            usr2=datetime(pd.year+1,m,d)
+
+            if (usr1>pd):
+                return (usr1)
+            else:
+                return (usr2)
+        d=day_count(pd)
+        timeusr=(d-pd)
+        z=timeusr.days* 24 * 3600 + timeusr.seconds
+        def seconds(seconds):
+            minutes,seconds=divmod(seconds,60)
+            hours,minutes=divmod(minutes,60)
+            days,hours=divmod(hours,24)
+            return days,hours,minutes,seconds
+        print("\n%d days,%d hours,%d minutes,%d seconds"%seconds(z))
+    elif c=="no":
+        break
+        
+        
+        
+        ####output####
+        
+        remaining days coming to your birtday yes or no:yes
+enter to the birthday year:2000
+enter to the birthday month:12
+enter to the birthday date:15
+
+56 days,9 hours,6 minutes,21 seconds
